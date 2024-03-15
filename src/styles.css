@@ -16,7 +16,9 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
-
+.dash-date {
+    font-size: 18px;
+}
 .input-group-text img {
     margin-right: 10px;
 }
