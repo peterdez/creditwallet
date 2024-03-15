@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  welcomeMsg = 'Good Morning';
+  welcomeMsgName = 'Michael';
+  date = 'April 7, 2021';
   ngOnInit(): void {
   }
 
