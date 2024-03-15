@@ -24,12 +24,12 @@ body {
     color: #828282;
 }
 .pagination span {
-    color: #ffa378;
+    color: #F56B2A;
     display: inline-block;
     background: #ffffff;
-    padding: 4px;
+    padding: 4px 8px;
     border-radius: 5px;
-    border: 1px solid #ffa378;
+    border: 1px solid #FEE9DF;
 }
 .form-control:focus {
     border-color: #F56B2A;
