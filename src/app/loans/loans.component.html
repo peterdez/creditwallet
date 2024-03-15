@@ -1,10 +1,12 @@
 <div class="loans-div">
     <div class="row"><h2 class="fw-semibold pt-2 pb-5 loans-title">{{title}}</h2></div>
     <div class="row">
-        <div class="input-group search-div mb-3 border-0">
+        <div class="input-group search-div mb-4 border-0">
             <span class="input-group-text ps-4" id="basic-addon1"><img alt="My image name" src="./assets/images/search.png"></span>
             <input type="text" class="form-control border-0 py-2" [(ngModel)]="searchTitle" (keyup)="findByTitle()"  placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
         </div>
+        </div>
+        <div class="row">
         <div class="table-responsive">
         <p *ngIf="!loans">Loading data...</p>
         <table *ngIf="loans" class="table">
@@ -39,12 +41,14 @@
               </tr>
             </tbody>
         </table>
-        <!--ngb-pagination 
-  [collectionSize]="collectionSize"  
-  [(page)]="currentPage"  
-  [boundaryLinks]="true" > 
-</ngb-pagination-->
+          <!--ngb-pagination 
+          [collectionSize]="collectionSize"  
+          [(page)]="currentPage"  
+          [boundaryLinks]="true" > 
+          </ngb-pagination-->
         </div>
-        <div *ngIf="loans" class="pagination"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
-    </div>
+        </div>
+        <div class="row">
+        <div *ngIf="loans" class="col-md-12 loans-pagination"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
+        </div>
     </div>

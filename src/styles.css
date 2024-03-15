@@ -23,10 +23,10 @@ body {
     margin-right: 10px;
 }
 
-.pagination {
+.loans-pagination {
     color: #828282;
 }
-.pagination span {
+.loans-pagination span {
     color: #F56B2A;
     display: inline-block;
     background: #ffffff;
