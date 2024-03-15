@@ -6,7 +6,8 @@
             <input type="text" class="form-control border-0 py-2" [(ngModel)]="searchTitle" (keyup)="findByTitle()"  placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
         </div>
         <div class="table-responsive">
-        <table class="table">
+        <p *ngIf="!loans">Loading data...</p>
+        <table *ngIf="loans" class="table">
             <thead>
               <tr class="my-4">
                 <th scope="col" style="border-top-left-radius: 5px;"></th>
@@ -43,7 +44,7 @@
   [(page)]="currentPage"  
   [boundaryLinks]="true" > 
 </ngb-pagination-->
-<div class="pagination"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
         </div>
+        <div *ngIf="loans" class="pagination"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
     </div>
     </div>
