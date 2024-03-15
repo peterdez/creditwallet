@@ -31,7 +31,13 @@ body {
     border-radius: 5px;
     border: 1px solid #ffa378;
 }
-
+.form-control:focus {
+    border-color: #F56B2A;
+    border: none;
+    /*box-shadow: 0 0 0 0.2rem rgba(245, 107, 42, 0.25);*/
+    box-shadow: none;
+    outline: 0 none;
+} 
 .image-div img {
     width: 50px;
     height: 50px;
