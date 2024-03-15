@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #FCFBFB;
+    color: #333333;
+    font-family: "Josefin Sans", sans-serif;
+}
+.input-group {
+    height: 50px;
+}
+.input-group-text {
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.input-group-text img {
+    margin-right: 10px;
+}
+
+.pagination span {
+    color: #ffa378;
+    display: inline-block;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ffa378;
+}
+
+.image-div img {
+    width: 50px;
+    height: 50px;
+   margin-left: 60px;
+}
+
+.title {
+    color: #333333;
+}
+
+/* search 1 */
+.fa-search {
+    margin-right: 5px;
+    /*position: absolute;
+width: 24px;
+height: 24px;
+left: 281px;
+top: 235px;*/
+}
+thead tr {
+    background-color: #FEE9DF;
+}
+thead tr th{
+    height: 50px;
+    vertical-align: middle;
+    background-color: #FEE9DF !important;
+}
+.btn-primary {
+     background: #F56B2A !important;
+     border: 0;
+}
+tr th, tr td {
+    height: 100px;
+    vertical-align: middle; 
+}
+
+
+ tr:nth-child(odd) th, tr:nth-child(odd) td {
+    background-color: #FCFBFB;
+    }
+
+   tr:nth-child(even) th, tr:nth-child(even) td{
+    background-color: #ffffff;
+    }
+
+    th, td {
+       background-color: lightseagreen;
+    }

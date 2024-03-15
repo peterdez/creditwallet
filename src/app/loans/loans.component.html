@@ -1,0 +1,47 @@
+<div class="loans-div">
+    <div class="row"><h2>Loans</h2></div>
+    <div class="row">
+        <div class="input-group mb-3 border-0">
+            <span class="input-group-text ps-4" id="basic-addon1"><img alt="My image name" src="./assets/images/search.png">Search</span>
+            <input type="text" class="form-control border-0 py-2" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+              <tr class="my-4">
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">IPPIS</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Tenor</th>
+                <th scope="col">Date</th>
+                <th scope="col">Mode</th>
+                <th scope="col">MDA Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let loan of loans">
+                <th scope="row"><a href="" class="btn btn-primary">View</a></th>
+                <th scope="row">{{loan.firstname + ' ' + loan.lastname}}</th>
+                <td>{{loan.marketer}}</td>
+                <td>{{loan.telephone}}</td>
+                <td>{{loan.ippisnumber}}</td>
+                <td>{{loan.loan_amount}}</td>
+                <td>{{loan.tenor}}</td>
+                <td>{{loan.date_of_disbursement}}</td>
+                <td>Web</td>
+                <td>{{loan.marketer_name}}</td>
+              </tr>
+            </tbody>
+        </table>
+        <!--ngb-pagination 
+  [collectionSize]="collectionSize"  
+  [(page)]="currentPage"  
+  [boundaryLinks]="true" > 
+</ngb-pagination-->
+<div class="pagination"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
+        </div>
+    </div>
+    </div>
