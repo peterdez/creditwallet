@@ -4,7 +4,7 @@ body {
     color: #333333;
     font-family: "Josefin Sans", sans-serif;
 }
-.input-group {
+.search-div {
     height: 50px;
     width: 40%;
 }
@@ -90,3 +90,13 @@ tr th, tr td {
         border: none;
         background-color: #ffffff;
     }
+
+    @media only screen and (max-width: 768px) {
+        .search-div {
+            height: 50px;
+            width: 100%;
+        }
+        .profile-div {
+            justify-content: flex-start !important;
+        }
+      }
