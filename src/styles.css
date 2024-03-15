@@ -75,6 +75,7 @@ thead tr th{
     background-color: #FEE9DF !important;
 }
 .btn-primary {
+    padding: 8px 20px;
      background: #F56B2A !important;
      border: 0;
 }
