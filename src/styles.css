@@ -6,6 +6,7 @@ body {
 }
 .input-group {
     height: 50px;
+    width: 40%;
 }
 .input-group-text {
     vertical-align: middle;
