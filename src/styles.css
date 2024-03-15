@@ -55,6 +55,7 @@ thead tr {
     background-color: #FEE9DF;
 }
 thead tr th{
+    font-weight: normal;
     height: 50px;
     vertical-align: middle;
     background-color: #FEE9DF !important;
