@@ -19,6 +19,9 @@ body {
     margin-right: 10px;
 }
 
+.pagination {
+    color: #828282;
+}
 .pagination span {
     color: #ffa378;
     display: inline-block;
@@ -67,12 +70,15 @@ tr th, tr td {
 
  tr:nth-child(odd) th, tr:nth-child(odd) td {
     background-color: #FCFBFB;
+    border: none;
     }
 
    tr:nth-child(even) th, tr:nth-child(even) td{
     background-color: #ffffff;
+    border: none;
     }
 
     th, td {
-       background-color: lightseagreen;
+        border: none;
+        background-color: #ffffff;
     }
