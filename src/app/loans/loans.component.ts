@@ -7,30 +7,37 @@ import { LoanService } from '../loan.service';
   styleUrls: ['./loans.component.css']
 })
 export class LoansComponent implements OnInit {
+  searchTitle: any;
+  isSearched = false;
   currentPage: any;
   collectionSize: any;
   total: any;
-  loans: any = [];
+  loans: any;
+  filteredLoans: any = [];
   result: any;
-  /*getLoans(): void {
-    this.loans = this.loanService.getLoans();
-  }*/
+  findByTitle() {
+    if (!this.searchTitle && this.isSearched == false) {
+      this.filteredLoans = this.loans;
+      return;
+    }
+    this.filteredLoans = this.loans.filter((loan: any) => loan.firstname.toLowerCase().substring(0, this.searchTitle.length) === this.searchTitle.trim().toLowerCase());
+    console.log(this.filteredLoans);
+    this.isSearched = true;
+  }  
   getLoans(): void {
     this.loanService.getLoans()
         .subscribe((res) => {
           this.result = res;
-          //this.loans = res.loans;
           this.loans = (res.loans.data);
+          this.filteredLoans = (res.loans.data);
           this.currentPage = (res.loans.current_page);
           this.collectionSize = (res.loans.data.length);
           this.total = (res.loans.total);
-          console.log(res);
-          console.log(this.collectionSize);
         })
   }
   constructor(
     private loanService: LoanService
-  ) { }
+  ) {}
 
 
   ngOnInit(): void {
