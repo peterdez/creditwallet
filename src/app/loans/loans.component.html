@@ -11,6 +11,7 @@
               <tr class="my-4">
                 <th scope="col" style="border-top-left-radius: 5px;"></th>
                 <th scope="col">Name</th>
+                <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone Number</th>
                 <th scope="col">IPPIS No</th>
@@ -23,8 +24,9 @@
             </thead>
             <tbody>
               <tr *ngFor="let loan of loans">
-                <th scope="row"><a href="" class="btn btn-primary">View</a></th>
-                <th scope="row">{{loan.firstname + ' ' + loan.lastname}}</th>
+                <th scope="row"></th>
+                <td><a href="" class="btn btn-primary">View</a></td>
+                <td>{{loan.firstname + ' ' + loan.lastname}}</td>
                 <td>{{loan.firstname + '@gmail.com'}}</td>
                 <td>{{loan.telephone}}</td>
                 <td>{{loan.ippisnumber}}</td>
