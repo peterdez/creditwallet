@@ -7,6 +7,7 @@ import { LoanService } from '../loan.service';
   styleUrls: ['./loans.component.css']
 })
 export class LoansComponent implements OnInit {
+  title = 'Loans';
   searchTitle: any;
   isSearched = false;
   currentPage: any;
