@@ -41,15 +41,16 @@
               </tr>
             </tbody>
         </table>
-          <!--ngb-pagination 
-          [collectionSize]="collectionSize"  
-          [(page)]="currentPage"  
-          [boundaryLinks]="true" > 
-          </ngb-pagination-->
         </div>
         </div>
-        <div *ngIf="loans" class="row loans-pagination">
-        <div class="col-md-6"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
-        <div class="col-md-6 text-end"><p>{{currentPage}} - {{lastPage}}</p></div>
+        <div *ngIf="loans" class="row loans-pagination mb-4">
+        <div class="col-md-6 d-flex align-items-center"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
+        <div class="d-flex align-items-center justify-content-end col-md-6 text-end">
+          <p class="me-3 pages-text">{{currentPage}} - {{lastPage}}</p>
+          <p>
+            <button class="rounded-start-2" (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1"><app-arrow-left-svg></app-arrow-left-svg></button>
+            <button class="rounded-end-2" (click)="changePage(currentPage + 1)" [disabled]="currentPage === lastPage"><app-arrow-right-svg></app-arrow-right-svg></button>
+          </p>
+        </div>
         </div>
     </div>

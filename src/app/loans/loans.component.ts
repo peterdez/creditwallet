@@ -17,6 +17,11 @@ export class LoansComponent implements OnInit {
   loans: any;
   filteredLoans: any = [];
   result: any;
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.lastPage) {
+    this.currentPage = page;
+    }
+  }
   findByTitle() {
     if (!this.searchTitle && this.isSearched === false) {
       this.filteredLoans = this.loans;

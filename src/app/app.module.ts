@@ -8,6 +8,8 @@ import { LoansComponent } from './loans/loans.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchSvgComponent } from './search-svg/search-svg.component';
 import { DownArrowSvgComponent } from './down-arrow-svg/down-arrow-svg.component';
+import { ArrowLeftSvgComponent } from './arrow-left-svg/arrow-left-svg.component';
+import { ArrowRightSvgComponent } from './arrow-right-svg/arrow-right-svg.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { DownArrowSvgComponent } from './down-arrow-svg/down-arrow-svg.component
     HeaderComponent,
     SearchSvgComponent,
     DownArrowSvgComponent,
+    ArrowLeftSvgComponent,
+    ArrowRightSvgComponent,
   ],
   imports: [
     BrowserModule,
