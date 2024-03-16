@@ -39,6 +39,9 @@ body {
     border: none;
     padding: 12px 16px;
 }
+.loans-pagination button:hover {
+    background-color: #e6e6e6;
+}
 .loans-pagination button:disabled {
     background-color: #F2F2F2;
 }
