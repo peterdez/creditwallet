@@ -20,6 +20,7 @@ export class LoansComponent implements OnInit {
   changePage(page: number): void {
     if (page >= 1 && page <= this.lastPage) {
     this.currentPage = page;
+    this.getLoans(this.currentPage);
     }
   }
   findByTitle() {
@@ -32,8 +33,8 @@ export class LoansComponent implements OnInit {
     this.isSearched = true;
     //console.log(this.filteredLoans);
   }  
-  getLoans(): void {
-    this.loanService.getLoans()
+  getLoans(page: number): void {
+    this.loanService.getLoans(page)
         .subscribe((res) => {
           this.result = res;
           this.loans = (res.loans.data);
@@ -51,7 +52,7 @@ export class LoansComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getLoans();
+    this.getLoans(1);
   }
 
 }
