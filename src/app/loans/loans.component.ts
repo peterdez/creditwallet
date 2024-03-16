@@ -7,6 +7,7 @@ import { LoanService } from '../loan.service';
   styleUrls: ['./loans.component.css']
 })
 export class LoansComponent implements OnInit {
+  goToPage = false;
   title = 'Loans';
   searchTitle: any;
   isSearched = false;
@@ -36,6 +37,7 @@ export class LoansComponent implements OnInit {
     //console.log(this.filteredLoans);
   }  
   getLoans(page: number): void {
+    this.goToPage = true;
     this.loanService.getLoans(page)
         .subscribe((res) => {
           this.result = res;
@@ -45,7 +47,8 @@ export class LoansComponent implements OnInit {
           this.lastPage = (res.loans.last_page);
           this.collectionSize = (res.loans.data.length);
           this.total = (res.loans.total);
-          console.log(res);
+          this.goToPage = false;
+          //console.log(res);
         })
   }
   getLoansSearch(search: any): void {
@@ -58,7 +61,7 @@ export class LoansComponent implements OnInit {
           this.lastPage = (res.loans.last_page);
           this.collectionSize = (res.loans.data.length);
           this.total = (res.loans.total);
-          console.log(res);
+          //console.log(res);
         })
   }
   constructor(
