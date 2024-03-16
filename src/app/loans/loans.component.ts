@@ -17,13 +17,14 @@ export class LoansComponent implements OnInit {
   filteredLoans: any = [];
   result: any;
   findByTitle() {
-    if (!this.searchTitle && this.isSearched == false) {
+    if (!this.searchTitle && this.isSearched === false) {
       this.filteredLoans = this.loans;
       return;
     }
     this.filteredLoans = this.loans.filter((loan: any) => loan.firstname.toLowerCase().substring(0, this.searchTitle.length) === this.searchTitle.trim().toLowerCase());
-    console.log(this.filteredLoans);
+    this.collectionSize = this.filteredLoans.length;
     this.isSearched = true;
+    //console.log(this.filteredLoans);
   }  
   getLoans(): void {
     this.loanService.getLoans()
