@@ -6,12 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoansComponent } from './loans/loans.component';
 import { HeaderComponent } from './header/header.component';
+import { SearchSvgComponent } from './search-svg/search-svg.component';
+import { DownArrowSvgComponent } from './down-arrow-svg/down-arrow-svg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
     HeaderComponent,
+    SearchSvgComponent,
+    DownArrowSvgComponent,
   ],
   imports: [
     BrowserModule,
