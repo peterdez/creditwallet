@@ -78,8 +78,11 @@ thead tr th{
 }
 .btn-primary {
     padding: 8px 20px;
-     background: #F56B2A !important;
+     background: #F56B2A;
      border: 0;
+}
+.btn-primary:hover {
+    background: #002e5b;
 }
 tr .btn-primary {
     font-size: 12px;
