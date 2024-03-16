@@ -19,7 +19,6 @@ export class LoanService {
   }
 
   getLoansSearch(search: any): Observable<any> {
-    //return this.http.post<any>(this.loansUrl, { params }, this.httpOptions);
     return this.http.post<any>(`${this.loansUrl}/?search_text=${search}`, this.httpOptions)
   }
 
