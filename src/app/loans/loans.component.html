@@ -48,7 +48,8 @@
           </ngb-pagination-->
         </div>
         </div>
-        <div class="row">
-        <div *ngIf="loans" class="col-md-12 loans-pagination"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
+        <div *ngIf="loans" class="row loans-pagination">
+        <div class="col-md-6"><p>Displaying  <span>{{collectionSize}}</span> out of {{total}} results</p></div>
+        <div class="col-md-6 text-end"><p>{{currentPage}} - {{lastPage}}</p></div>
         </div>
     </div>

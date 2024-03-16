@@ -11,6 +11,7 @@ export class LoansComponent implements OnInit {
   searchTitle: any;
   isSearched = false;
   currentPage: any;
+  lastPage: any;
   collectionSize: any;
   total: any;
   loans: any;
@@ -33,6 +34,7 @@ export class LoansComponent implements OnInit {
           this.loans = (res.loans.data);
           this.filteredLoans = (res.loans.data);
           this.currentPage = (res.loans.current_page);
+          this.lastPage = (res.loans.last_page);
           this.collectionSize = (res.loans.data.length);
           this.total = (res.loans.total);
           console.log(res);
