@@ -35,6 +35,7 @@ export class LoansComponent implements OnInit {
           this.currentPage = (res.loans.current_page);
           this.collectionSize = (res.loans.data.length);
           this.total = (res.loans.total);
+          console.log(res);
         })
   }
   constructor(

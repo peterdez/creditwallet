@@ -46,7 +46,9 @@ body {
     height: 50px;
    margin-left: 40px;
 }
-
+.image-div .dropdown .btn.show {
+    border: none !important;
+}
 .title {
     color: #333333;
     font-size: 36px;
