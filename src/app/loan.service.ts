@@ -14,8 +14,13 @@ export class LoanService {
   loans: any = [];
 
   getLoans(page: number): Observable<any> {
-    //return this.http.post<any>(this.loansUrl + '?page=2', this.httpOptions);
+    //return this.http.post<any>(this.loansUrl, { params }, this.httpOptions);
     return this.http.post<any>(`${this.loansUrl}/?page=${page}`, this.httpOptions)
+  }
+
+  getLoansSearch(search: any): Observable<any> {
+    //return this.http.post<any>(this.loansUrl, { params }, this.httpOptions);
+    return this.http.post<any>(`${this.loansUrl}/?search_text=${search}`, this.httpOptions)
   }
 
   constructor(

@@ -28,13 +28,28 @@ export class LoansComponent implements OnInit {
       this.filteredLoans = this.loans;
       return;
     }
-    this.filteredLoans = this.loans.filter((loan: any) => loan.firstname.toLowerCase().substring(0, this.searchTitle.length) === this.searchTitle.trim().toLowerCase());
+    this.getLoansSearch(this.searchTitle);
+    //this.filteredLoans = this.loans.filter((loan: any) => loan.firstname.toLowerCase().substring(0, this.searchTitle.length) === this.searchTitle.trim().toLowerCase());
+    this.filteredLoans = this.loans;
     this.collectionSize = this.filteredLoans.length;
     this.isSearched = true;
     //console.log(this.filteredLoans);
   }  
   getLoans(page: number): void {
     this.loanService.getLoans(page)
+        .subscribe((res) => {
+          this.result = res;
+          this.loans = (res.loans.data);
+          this.filteredLoans = (res.loans.data);
+          this.currentPage = (res.loans.current_page);
+          this.lastPage = (res.loans.last_page);
+          this.collectionSize = (res.loans.data.length);
+          this.total = (res.loans.total);
+          console.log(res);
+        })
+  }
+  getLoansSearch(search: any): void {
+    this.loanService.getLoansSearch(search)
         .subscribe((res) => {
           this.result = res;
           this.loans = (res.loans.data);
